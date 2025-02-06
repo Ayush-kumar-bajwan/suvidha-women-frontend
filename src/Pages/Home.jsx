@@ -1,6 +1,6 @@
 import { IoMdArrowDropright } from "react-icons/io";
 import Header from "../Components/Header";
-import Footer from "../Components/Footer1";
+import Footer from "../Components/Footer";
 
 const Homepage=()=>{
     return (

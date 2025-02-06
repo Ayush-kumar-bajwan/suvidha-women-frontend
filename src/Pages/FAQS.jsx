@@ -1,4 +1,4 @@
-import Footer from "../Components/Footer1";
+import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import * as React from "react";
 import Accordion, { accordionClasses } from "@mui/material/Accordion";
@@ -66,7 +66,7 @@ const FAQS = () => {
                 id="panel1-header"
               >
                 <Typography component="span">
-                <span className="text-xl font-normal" >Why should I donate to Suvidha Foundation ?</span>
+                <span className="text-lg" >Why should I donate to Suvidha Foundation ?</span>
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
@@ -82,7 +82,7 @@ const FAQS = () => {
                 id="panel2-header"
               >
                 <Typography component="span">
-                <span className="text-xl font-normal">How will be my donation utilized ?</span>
+                <span className="text-lg">How will be my donation utilized ?</span>
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
@@ -98,7 +98,7 @@ const FAQS = () => {
                 id="panel2-header"
               >
                 <Typography component="span">
-                <span className="text-xl font-normal">Is my donation tax-deductible ?</span>
+                <span className="text-lg">Is my donation tax-deductible ?</span>
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
@@ -114,7 +114,7 @@ const FAQS = () => {
                 id="panel2-header"
               >
                 <Typography component="span">
-                <span className="text-xl font-normal">Are there different ways to donate ?</span>
+                <span className="text-lg">Are there different ways to donate ?</span>
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
@@ -123,14 +123,14 @@ const FAQS = () => {
                 </Typography>
               </AccordionDetails>
             </Accordion>
-            <Accordion className="mb-5">
+            <Accordion className="mb-20">
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel2-content"
                 id="panel2-header"
               >
                 <Typography component="span">
-                <span className="text-xl font-normal">Can I get information on the impact of my donation ?</span>
+                <span className="text-lg">Can I get information on the impact of my donation ?</span>
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
