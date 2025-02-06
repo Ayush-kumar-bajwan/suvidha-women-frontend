@@ -1,17 +1,28 @@
-import React from 'react'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import {createBrowserRouter,RouterProvider} from 'react-router-dom';
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import FAQS from "./Pages/FAQS";
+import ContactSection from "./Pages/Contact";
+import Events from './Pages/Events';
+import Donate from './Pages/Donateus';
+
+let approuter=createBrowserRouter([
+  {path:"/",element:<Home /> },
+  {path:"/Aboutus",element:<About />},
+  {path:"/Contactus",element:<ContactSection />},
+  {path:"/FAQS",element:<FAQS />},
+  {path:"/Events",element:<Events />},
+  {path:"/Donateus",element:<Donate />}
+]);
 
 const App = () => {
   return (
-    <div className='w-full'> 
-    {/* <h1 className='w-full h-12 bg-black text-white'> welcome to home page</h1> */}
-    <div>
-      <Contact />
-      <Footer />
-    </div>
-    </div>
-  )
+    <>
+    
+      <RouterProvider router={approuter} />
+    </>
+  );
 }
 
-export default App
+export default App;
+ 

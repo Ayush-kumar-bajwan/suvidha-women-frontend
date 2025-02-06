@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import axios from 'axios';
+import Header from '../Components/Header';
+import Footer from '../Components/Footer';
+
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -70,6 +73,8 @@ const ContactSection = () => {
   };
 
   return (
+    <>
+    <Header />
     <div className="relative w-full overflow-hidden bg-[#FFEDFA] py-16">
       {/* Watermark Effect */}
       <div className="absolute inset-0 opacity-5">
@@ -88,7 +93,7 @@ const ContactSection = () => {
             <div className="text-center lg:text-left">
               <h2 className="text-4xl font-bold text-[#DE3163] mb-4">Get in Touch</h2>
               <p className="text-gray-600 mb-8">
-                Have questions about our women's health initiatives? We're here to help and support you.
+                Have questions about our womens health initiatives? We are here to help and support you.
               </p>
             </div>
 
@@ -187,6 +192,8 @@ const ContactSection = () => {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 
