@@ -1,19 +1,48 @@
 import { IoMdArrowDropright } from "react-icons/io";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import { Link } from "react-router-dom";
+import {useGSAP} from '@gsap/react';
+import gsap from "gsap";
 
-const Homepage=()=>{
+const Homepage=()=>{     
+  
+    useGSAP(function(){
+      gsap.from(".Animate-tagline",{
+        opacity:0,
+        x:-300,
+        duration:2,
+        delay:0.5,
+        stagger:1,
+        scrub:5,
+        repeat:0,
+      })
+    },[]);
+
+    useGSAP(function(){
+      gsap.from(".Animate-Introduction",{
+        opacity:0,
+        duration:2,
+        delay:0.5,
+        y:300,
+        scrub:5,
+        stagger:1,
+        repeat:0
+      })
+    },[]);
+
     return (
         <div>
               <Header />
                 <div className="flex w-full justify-around mt-5">
                   <div className="flex flex-col gap-3">
-                    <h1 className="text-6xl font-bold leading-18 bg-[#DE3163] inline-block text-transparent bg-clip-text">
-                      Empowering the <br />
-                      Rural Women for a<br /> Healthier Tomorrow
-                    </h1>
-                    <button className="mt-5 hover:animate-none animate-bounce text-2xl font-semibold h-[10vh] bg-[#DE3163] rounded-2xl text-white ">
-                      Register For Workshop
+                    <div className=" Animate-tagline text-6xl font-bold leading-18 bg-[#DE3163] inline-block text-transparent bg-clip-text">
+                      <h1>Empowering the </h1>
+                      <h1>Rural Women for a </h1>
+                      <h1> Healthier Tomorrow </h1>
+                    </div>
+                    <button className="Animate-tagline mt-5 hover:animate-none animate-bounce text-2xl font-semibold h-[10vh] bg-[#DE3163] rounded-2xl text-white ">
+                     <Link to="/Contactus"> Register For Workshop</Link>
                     </button>
                   </div>
                   <div>
@@ -24,9 +53,9 @@ const Homepage=()=>{
                     />
                   </div>
                 </div>
-                <div className="my-20">
-                  <div className="flex flex-col justify-center mx-auto items-center gap-10 w-[80%]">
-                    <h1 className="text-4xl font-semibold text-[#DE3163]">Introduction - About Suvidha Womens Health & Wellness Initiative</h1>
+                <div className="my-20 ">
+                  <div className="Animate-Introduction flex flex-col justify-center mx-auto items-center gap-10 w-[80%]">
+                    <h1 className=" text-4xl font-semibold text-[#DE3163]">Introduction - About Suvidha Womens Health & Wellness Initiative</h1>
                     <h1 className="text-xl"><IoMdArrowDropright className="inline text-3xl"/>  At Suvidha Womens Health & Wellness Initiative, we are dedicated to empowering rural women by providing access to essential health education, wellness resources, and community support. <br />
                     <IoMdArrowDropright className="inline text-3xl"/>  Millions of women in rural areas face challenges like limited healthcare access, lack of awareness, and social taboos around women’s health. Suvidha was founded to break these barriers and create a safe, supportive space where women can learn, grow, and take control of their well-being. <br />
                     <IoMdArrowDropright className="inline text-3xl"/>  Through workshops, health camps, and educational resources, we aim to spread awareness about menstrual hygiene, pregnancy care, birth control, and overall well-being—ensuring that every woman, no matter where she lives, has the knowledge and support she needs.
