@@ -1,8 +1,7 @@
 import  { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import axios from 'axios';
-import Header from '../Components/Header';
-import Footer from '../Components/Footer';
+
 
 
 const ContactSection = () => {
@@ -74,7 +73,7 @@ const ContactSection = () => {
 
   return (
     <>
-    <Header />
+   
     <div className="relative w-full overflow-hidden bg-[#FFEDFA] py-16">
       {/* Watermark Effect */}
       <div className="absolute inset-0 opacity-5">
@@ -86,7 +85,7 @@ const ContactSection = () => {
         </svg>
       </div>
 
-      <div className="container mx-auto px-4">
+      <div className=" container mx-auto px-4  ">
         <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12">
           {/* Left Content - Same as before */}
           <div className="w-full lg:w-1/2 space-y-8">
@@ -192,7 +191,7 @@ const ContactSection = () => {
         </div>
       </div>
     </div>
-    <Footer />
+    
     </>
   );
 };

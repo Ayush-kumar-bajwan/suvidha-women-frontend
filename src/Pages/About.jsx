@@ -1,5 +1,4 @@
-import Footer from "../Components/Footer";
-import Header from "../Components/Header";
+
 import { IoMdArrowDropright } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa"; 
 import { FaFacebook } from "react-icons/fa"; <FaFacebook />
@@ -8,7 +7,7 @@ import { FaInstagramSquare } from "react-icons/fa";
 const Aboutpage=()=>{
     return (
         <div>
-            <Header />
+            
             <div>
                 <img className="h-[50vh] mx-auto mt-20 rounded-2xl " src="https://s3-alpha-sig.figma.com/img/6566/8561/9f2b216eb7149431b9e36b447c35ce4d?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=JEkdOKRz4QG4fujxZB9afNAiPyxL5hVxf4TuzXpqUfw0~vOxHrKuxkNha4I6wFtu~PWuyew0YGDPiM9qQLDHO9pdXESiD3RRVYZPd6JDyWm0EvIhfSnjJWhu~Ud5AKUCCxOM0r9YprHpkCVHUK5pDuu6nBc5-yRcaTUPMGxG0yNUP~GK7LldoegPXG2B0-IN2uQbcV87lB2aFzYltqy7Y09MmFwUzdgESXibqV~oWlEu2JaCHgJ3FHOVRtOH8KWl~XfWwAGs28Hu-q2zw1z42rLmIdVW22oSxJMzQB2zlL~2YA40Fh3Wjg2i7d~UNibL7rNvAyq8ZU2qhdj3ZAdPWQ__" alt="AboutUs" />
             </div>
@@ -37,7 +36,7 @@ const Aboutpage=()=>{
                     </div>
                 </div>
             </div>
-            <Footer />
+            
         </div>
     );
 }

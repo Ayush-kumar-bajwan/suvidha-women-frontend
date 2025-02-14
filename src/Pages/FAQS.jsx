@@ -1,5 +1,3 @@
-import Footer from "../Components/Footer";
-import Header from "../Components/Header";
 import * as React from "react";
 import Accordion, { accordionClasses } from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -19,7 +17,7 @@ const FAQS = () => {
 
   return (
     <div>
-      <Header />
+     
       <div>
         <img
           className="h-[40vh] mx-auto"
@@ -142,7 +140,6 @@ const FAQS = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

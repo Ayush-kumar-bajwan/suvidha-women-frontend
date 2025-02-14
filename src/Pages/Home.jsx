@@ -1,6 +1,5 @@
 import { IoMdArrowDropright } from "react-icons/io";
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
+
 import { Link } from "react-router-dom";
 import {useGSAP} from '@gsap/react';
 import gsap from "gsap";
@@ -33,7 +32,7 @@ const Homepage=()=>{
 
     return (
         <div>
-              <Header />
+            
                 <div className="flex w-full justify-around mt-5">
                   <div className="flex flex-col gap-3">
                     <div className=" Animate-tagline text-6xl font-bold leading-18 bg-[#DE3163] inline-block text-transparent bg-clip-text">
@@ -42,7 +41,7 @@ const Homepage=()=>{
                       <h1> Healthier Tomorrow </h1>
                     </div>
                     <button className="Animate-tagline mt-5 hover:animate-none animate-bounce text-2xl font-semibold h-[10vh] bg-[#DE3163] rounded-2xl text-white ">
-                     <Link to="/Contactus"> Register For Workshop</Link>
+                     <Link to="/register-user"> Register For Workshop</Link>
                     </button>
                   </div>
                   <div>
@@ -75,7 +74,7 @@ const Homepage=()=>{
                     </h1>
                   </div>
                 </div>
-                <Footer />
+                
               </div>
     );
 }
