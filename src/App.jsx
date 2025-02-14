@@ -9,6 +9,10 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import RegisterBeneficiary from './Pages/RegisterBeneficiary';
 import RegistrationSuccess from './Pages/RegistrationSuccess';
+import LoginOptions from "./Pages/LoginPage";
+import VolunteerRegister from "./Pages/VolunteerRegister";
+import AdminLogin from "./Pages/AdminLogin";
+import AdminDashboard from "./Pages/AdminDashboard";
 
 const Layout = () => {
   return (
@@ -35,6 +39,10 @@ const approuter = createBrowserRouter([
       { path: "/Donateus", element: <Donate /> },
       {path: "/register-user", element: <RegisterBeneficiary />},
       {path: "/registration-success", element: <RegistrationSuccess />},
+      {path: "/login-options", element: <LoginOptions />},
+      {path: "/volunteer-register", element: <VolunteerRegister />},
+      {path: "/admin-login", element: <AdminLogin />},
+      {path: "/admin-dashboard", element: <AdminDashboard />},
     ],
   },
 ]);

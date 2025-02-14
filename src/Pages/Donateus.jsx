@@ -15,7 +15,7 @@ const DonationPage = () => {
       <div className="bg-white p-6 rounded-2xl shadow-md w-full max-w-lg ">
         <h2 className="text-xl font-semibold text-[#DE3163]">Scan to Donate</h2>
         <div className="mt-4 border-2 border-dashed border-[#E195AB] p-4 rounded-xl flex flex-col items-center">
-          <img src="/public/suvidha-qr.jpeg" alt="QR Code" className="w-40 h-40 object-cover" />
+          <img src="/suvidha-qr.jpeg" alt="QR Code" className="w-40 h-40 object-cover" />
         </div>
       </div>
 
