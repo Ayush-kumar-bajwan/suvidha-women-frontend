@@ -14,6 +14,8 @@ import VolunteerRegister from "./Pages/VolunteerRegister";
 import AdminLogin from "./Pages/AdminLogin";
 import AdminDashboard from "./Pages/AdminDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
+import ApproveVolunteers from "./Pages/ApproveVolunteers";
+import ScheduleEvents from "./Pages/ScheduleEvents";
 
 const Layout = () => {
   return (
@@ -42,12 +44,16 @@ const approuter = createBrowserRouter([
       {path: "/registration-success", element: <RegistrationSuccess />},
       {path: "/login-options", element: <LoginOptions />},
       {path: "/volunteer-register", element: <VolunteerRegister />},
+      {path: "/volunteer-register", element: <VolunteerRegister />},
+      {path: "/admin-dashboard/approve-volunteers", element: <ApproveVolunteers />},
+      {path: "/admin-dashboard/schedule-events", element: <ScheduleEvents />},
       {path: "/admin-login", element: <AdminLogin />},
       {path: "/admin-dashboard", element: (
         <ProtectedRoute>
           <AdminDashboard />
         </ProtectedRoute>
       )},
+
     ],
   },
 ]);

@@ -13,6 +13,7 @@ const Header=()=>{
                 <h1 className="Header"><Link to="/FAQS">FAQs</Link></h1>
                 <h1 className="Header"><Link to="/Donateus">Donate Us</Link></h1>
                 <h1 className="Header"><Link to="/Contactus">Contact Us</Link></h1>
+                <h1 className="Header"><Link to="/login-options">Login</Link></h1>
             </div>
         </div>
     );
