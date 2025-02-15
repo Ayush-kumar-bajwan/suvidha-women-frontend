@@ -44,7 +44,6 @@ const approuter = createBrowserRouter([
       {path: "/registration-success", element: <RegistrationSuccess />},
       {path: "/login-options", element: <LoginOptions />},
       {path: "/volunteer-register", element: <VolunteerRegister />},
-      {path: "/volunteer-register", element: <VolunteerRegister />},
       {path: "/admin-dashboard/approve-volunteers", element: <ApproveVolunteers />},
       {path: "/admin-dashboard/schedule-events", element: <ScheduleEvents />},
       {path: "/admin-login", element: <AdminLogin />},
