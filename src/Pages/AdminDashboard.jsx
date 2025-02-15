@@ -29,6 +29,7 @@ const AdminDashboard = () => {
     localStorage.removeItem('adminToken');
     navigate('/admin-login');
   };
+  
 
   const stats = [
     { title: 'Total Beneficiaries', value: '2,543', icon: Users },

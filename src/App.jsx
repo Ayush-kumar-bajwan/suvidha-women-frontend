@@ -13,6 +13,7 @@ import LoginOptions from "./Pages/LoginPage";
 import VolunteerRegister from "./Pages/VolunteerRegister";
 import AdminLogin from "./Pages/AdminLogin";
 import AdminDashboard from "./Pages/AdminDashboard";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const Layout = () => {
   return (
@@ -42,7 +43,11 @@ const approuter = createBrowserRouter([
       {path: "/login-options", element: <LoginOptions />},
       {path: "/volunteer-register", element: <VolunteerRegister />},
       {path: "/admin-login", element: <AdminLogin />},
-      {path: "/admin-dashboard", element: <AdminDashboard />},
+      {path: "/admin-dashboard", element: (
+        <ProtectedRoute>
+          <AdminDashboard />
+        </ProtectedRoute>
+      )},
     ],
   },
 ]);
