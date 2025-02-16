@@ -4,6 +4,7 @@ import { AlertCircle } from 'lucide-react';
 import axios from 'axios';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { BASE_URL } from '../services/api';
 
 const VolunteerRegister = () => {
   const navigate = useNavigate();
@@ -50,7 +51,7 @@ const VolunteerRegister = () => {
     setSuccess(null);
 
     try {
-      await axios.post('/api/volunteers/register', formData);
+      await axios.post(`${BASE_URL}/volunteers/register`, formData);
       setSuccess('Registration successful! Please wait for admin approval.');
       setTimeout(() => navigate('/'), 3000);
     } catch (err) {

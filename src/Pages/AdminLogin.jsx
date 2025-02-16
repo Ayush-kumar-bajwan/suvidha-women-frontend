@@ -4,6 +4,7 @@ import { AlertCircle, Shield } from 'lucide-react';
 import axios from 'axios';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { BASE_URL } from '../services/api';
 
 const AdminLogin = () => {
   const navigate = useNavigate();
@@ -47,7 +48,7 @@ const AdminLogin = () => {
     setError(null);
 
     try {
-      const response = await axios.post('/api/admins/login', formData);
+      const response = await axios.post(`${BASE_URL}/admins/login`, formData);
       const { token } = response.data;
       
       // Store token in localStorage

@@ -4,6 +4,7 @@ import axios from 'axios';
 import { AlertCircle } from 'lucide-react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { BASE_URL } from '../services/api';
 
 const RegisterBeneficiary = () => {
   const navigate = useNavigate();
@@ -63,7 +64,7 @@ const RegisterBeneficiary = () => {
     setError(null);
 
     try {
-      await axios.post('/api/beneficiaries/register', formData);
+      await axios.post(`${BASE_URL}/beneficiaries/register`, formData);
       navigate('/registration-success');
     } catch (err) {
       setError(err.response?.data?.message || 'Registration failed. Please try again.');

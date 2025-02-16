@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Calendar, MapPin, Clock, User, Filter, Users, Heart, AlertCircle } from 'lucide-react';
+import { BASE_URL } from '../services/api';
 
 
 
@@ -27,7 +28,7 @@ const EventsPage = () => {
   const fetchEvents = async () => {
     try {
       setError(null);
-      const response = await axios.get('/api/events');
+      const response = await axios.get(`${BASE_URL}/events`);
       setEvents(response.data);
     } catch (error) {
       setError('Failed to fetch events. Please try again later.');
@@ -42,7 +43,7 @@ const EventsPage = () => {
       setRegistering(true);
       // Assuming you have the beneficiaryId from auth context or similar
       const beneficiaryId = 'your-beneficiary-id';
-      await axios.post(`/api/events/${eventId}/register`, { beneficiaryId });
+      await axios.post(`${BASE_URL}/events/${eventId}/register`, { beneficiaryId });
       // Refresh events after registration
       fetchEvents();
     } catch (error) {

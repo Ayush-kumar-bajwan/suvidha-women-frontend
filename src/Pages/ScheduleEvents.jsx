@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { PlusCircle, Users } from "lucide-react";
 import gsap from "gsap";
+import { BASE_URL } from "../services/api";
 
 const ScheduleEvents = () => {
   const [events, setEvents] = useState([]);
@@ -22,7 +23,7 @@ const ScheduleEvents = () => {
 
   const fetchEvents = async () => {
     try {
-      const res = await axios.get("/api/events");
+      const res = await axios.get(`${BASE_URL}/events`);
       setEvents(res.data);
     } catch (err) {
       console.error("Error fetching events:", err);
@@ -36,7 +37,7 @@ const ScheduleEvents = () => {
         alert("You must be logged in to create an event!");
         return;
       }
-      await axios.post("/api/events", { title, description, date, time, location, host, capacity, healthCategory }, { headers: { Authorization: `Bearer ${token}` } });
+      await axios.post(`${BASE_URL}/events`, { title, description, date, time, location, host, capacity, healthCategory }, { headers: { Authorization: `Bearer ${token}` } });
       alert("Event created successfully!");
       fetchEvents();
     } catch (err) {
@@ -47,7 +48,7 @@ const ScheduleEvents = () => {
 
   const handleRegisterBeneficiary = async (eventId) => {
     try {
-      await axios.post(`/api/events/${eventId}/register`, { beneficiaryId });
+      await axios.post(`${BASE_URL}/events/${eventId}/register`, { beneficiaryId });
       alert("Beneficiary registered successfully!");
       fetchEvents();
     } catch (err) {

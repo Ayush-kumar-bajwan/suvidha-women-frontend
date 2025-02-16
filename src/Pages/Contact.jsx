@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import axios from 'axios';
+import { BASE_URL } from '../services/api';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -48,7 +49,7 @@ const ContactSection = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      const response = await axios.post('/api/contact/submit', formData);
+      const response = await axios.post(`${BASE_URL}/contact/submit`, formData);
 
       if (response.data.success) {
         setStatus({
