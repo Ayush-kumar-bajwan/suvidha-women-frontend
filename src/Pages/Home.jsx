@@ -1,81 +1,93 @@
-import { IoMdArrowDropright } from "react-icons/io";
-
 import { Link } from "react-router-dom";
-import {useGSAP} from '@gsap/react';
+import { IoMdArrowDropright } from "react-icons/io";
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-const Homepage=()=>{     
-  
-    useGSAP(function(){
-      gsap.from(".Animate-tagline",{
-        opacity:0,
-        x:-300,
-        duration:2,
-        delay:0.5,
-        stagger:1,
-        scrub:5,
-        repeat:0,
-      })
-    },[]);
+const Homepage = () => {
+  useGSAP(() => {
+    gsap.from(".Animate", {
+      opacity: 0,
+      y: 50,
+      duration: 1.1,
+      stagger: 0.3,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".Animate",
+        start: "top 80%", // Start animation when element is 80% in viewport
+        toggleActions: "play none none none",
+      },
+    });
+  }, []);
 
-    useGSAP(function(){
-      gsap.from(".Animate-Introduction",{
-        opacity:0,
-        duration:2,
-        delay:0.5,
-        y:300,
-        scrub:5,
-        stagger:1,
-        repeat:0
-      })
-    },[]);
+  return (
+    <div className="w-full min-h-screen bg-[#FFEDFA] text-gray-900">
+      {/* Hero Section */}
+      <div className="relative w-full h-screen flex flex-col justify-center items-center text-center bg-cover bg-center bg-no-repeat" 
+           style={{ backgroundImage: "url('/women.jpg')" }}>
+        <div className="absolute inset-0 bg-[#DE3163]/60"></div>
+        <div className="z-10 px-6 md:px-12">
+          <h1 className="Animate text-4xl md:text-6xl font-bold text-white drop-shadow-lg">
+            Empowering Rural Women for a Healthier Tomorrow
+          </h1>
+          <p className="Animate mt-4 text-lg md:text-xl text-white drop-shadow-md max-w-2xl mx-auto">
+            Providing access to healthcare, education, and wellness resources for women in need.
+          </p>
+          <Link to="/register-user">
+            <button className=" mt-6 px-6 py-3 text-lg font-semibold bg-white text-[#DE3163] rounded-lg shadow-md transition-all hover:bg-[#c42854] hover:text-white hover:scale-105">
+              Register for Workshop
+            </button>
+          </Link>
+        </div>
+      </div>
+      
+      {/* Why Suvidha? */}
+      <div className="px-6 md:px-12 py-16 text-center">
+        <h2 className="Animate text-3xl md:text-4xl font-semibold text-[#DE3163]">
+          Why Women's Health Matters?
+        </h2>
+        <p className="Animate mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
+          Millions of women in rural areas lack access to healthcare, face societal taboos, and struggle with awareness.
+          Suvidha aims to bridge this gap by providing essential health and wellness resources.
+        </p>
+      </div>
+      
+      {/* Our Initiatives */}
+      <div className="px-6 md:px-12 py-16 bg-[#E195AB]/20 text-center">
+        <h2 className="Animate text-3xl md:text-4xl font-semibold text-[#DE3163]">
+          Our Key Initiatives
+        </h2>
+        <div className="Animate mt-8 grid gap-8 md:grid-cols-3 max-w-5xl mx-auto">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold text-[#DE3163]">Pregnancy Care</h3>
+            <p className="mt-2 text-gray-700">Providing guidance and health checkups for expecting mothers.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold text-[#DE3163]">Menstrual Hygiene</h3>
+            <p className="mt-2 text-gray-700">Spreading awareness and breaking societal taboos around periods.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold text-[#DE3163]">Health Camps</h3>
+            <p className="mt-2 text-gray-700">Organizing free checkups, workshops, and wellness programs.</p>
+          </div>
+        </div>
+      </div>
+      
+      {/* Join Us */}
+      <div className="px-6 md:px-12 py-16 text-center">
+        <h2 className="Animate text-3xl md:text-4xl font-semibold text-[#DE3163]">
+          Join the Suvidha Movement
+        </h2>
+        <p className="Animate mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
+          Become a volunteer or beneficiary and contribute to women's health & wellness.
+        </p>
+        <Link to="/volunteer-register">
+          <button className="  t-6 px-6 py-3 text-lg font-semibold bg-[#DE3163] text-white rounded-lg shadow-md transition-all hover:bg-[#c42854] hover:scale-105">
+            Get Involved
+          </button>
+        </Link>
+      </div>
+    </div>
+  );
+};
 
-    return (
-        <div>
-            
-                <div className="flex w-full justify-around mt-5">
-                  <div className="flex flex-col gap-3">
-                    <div className=" Animate-tagline text-6xl font-bold leading-18 bg-[#DE3163] inline-block text-transparent bg-clip-text">
-                      <h1>Empowering the </h1>
-                      <h1>Rural Women for a </h1>
-                      <h1> Healthier Tomorrow </h1>
-                    </div>
-                    <button className="Animate-tagline mt-5 hover:animate-none animate-bounce text-2xl font-semibold h-[10vh] bg-[#DE3163] rounded-2xl text-white ">
-                     <Link to="/register-user"> Register For Workshop</Link>
-                    </button>
-                  </div>
-                  <div>
-                    <img
-                      className="h-[50vh] w-[80vh] rounded-3xl"
-                      src="https://s3-alpha-sig.figma.com/img/ae33/22d7/dc557d7ae429220cce730b9a54f5e0f4?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=BoENqnlR2Ag1DrzqjncZbcf4fDRyUD61IOq-iokj6bJnjWGLoPg0vXXl9Mb-hYOeI6vDp1d6tcPwv~s~-sRwfsVl8JZuiW7j8S70phH9hbvdaZH-OYcEhVnBglx-U1Lm7WL7Jmwz497WfRNJWqM7WZcrzjNkLOGgMqvpLtCN03VOhoMGrMZ-rMGElCgQ3cE3pdeQcEEqyEBdkS6ogBT0LxCjbMbBTAi9GY0NAzak9Spb7y~0-HNv~YTr7l9G6ao4YdkyOuJIE06fhrfXHw5szLwOscZVC0L0EAIKQMYFuKDBV5XRdtV79VX3ciLpHBkANfdkKIqgBBmJOqrm1sLO7g__"
-                      alt="Image"
-                    />
-                  </div>
-                </div>
-                <div className="my-20 ">
-                  <div className="Animate-Introduction flex flex-col justify-center mx-auto items-center gap-10 w-[80%]">
-                    <h1 className=" text-4xl font-semibold text-[#DE3163]">Introduction - About Suvidha Womens Health & Wellness Initiative</h1>
-                    <h1 className="text-xl"><IoMdArrowDropright className="inline text-3xl"/>  At Suvidha Womens Health & Wellness Initiative, we are dedicated to empowering rural women by providing access to essential health education, wellness resources, and community support. <br />
-                    <IoMdArrowDropright className="inline text-3xl"/>  Millions of women in rural areas face challenges like limited healthcare access, lack of awareness, and social taboos around women’s health. Suvidha was founded to break these barriers and create a safe, supportive space where women can learn, grow, and take control of their well-being. <br />
-                    <IoMdArrowDropright className="inline text-3xl"/>  Through workshops, health camps, and educational resources, we aim to spread awareness about menstrual hygiene, pregnancy care, birth control, and overall well-being—ensuring that every woman, no matter where she lives, has the knowledge and support she needs.
-                    </h1>
-                  </div> 
-                </div>
-                <div className="mb-20">
-                  <div className="flex flex-col justify-center mx-auto items-center gap-10 w-[80%]">
-                    <h1 className="text-4xl font-semibold text-[#DE3163]">🎯 Our Mission </h1>
-                    <h1 className="text-xl">  Our mission is to empower rural women with knowledge and access to healthcare so they can lead healthier, more confident lives. 
-                    To bridge the healthcare gap for women in rural regions by spreading awareness, providing education, and facilitating access to necessary health and wellness resources. We strive to bring lasting change by engaging with communities, advocating for better healthcare access, and ensuring that every woman receives the support she needs.
-                    <br /><br />
-                      We strive to : <br /><br />
-                      ✅Educate: Provide accessible, easy-to-understand health information. <br />
-                      ✅ Empower: Encourage women to make informed choices about their health. <br />
-                      ✅ Support: Build a strong community where women uplift and help each other.
-                    </h1>
-                  </div>
-                </div>
-                
-              </div>
-    );
-}
-export default Homepage
+export default Homepage;

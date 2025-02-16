@@ -1,8 +1,6 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import axios from 'axios';
-
-
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -10,7 +8,7 @@ const ContactSection = () => {
     email: '',
     message: ''
   });
-  
+
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState({ type: '', message: '' });
 
@@ -43,7 +41,7 @@ const ContactSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!validateForm()) return;
 
     setLoading(true);
@@ -51,13 +49,13 @@ const ContactSection = () => {
 
     try {
       const response = await axios.post('/api/contact/submit', formData);
-      
+
       if (response.data.success) {
         setStatus({
           type: 'success',
           message: 'Thank you! Your message has been sent successfully.'
         });
-        
+
         // Clear form
         setFormData({ name: '', email: '', message: '' });
       }
@@ -72,10 +70,8 @@ const ContactSection = () => {
   };
 
   return (
-    <>
-   
-    <div className="relative w-full overflow-hidden bg-[#FFEDFA] py-16">
-      {/* Watermark Effect */}
+    <div className="relative w-full overflow-hidden bg-[#FFEDFA] py-20 min-h-screen flex flex-col justify-center">
+      {/* Background Watermark */}
       <div className="absolute inset-0 opacity-5">
         <svg width="100%" height="100%" className="absolute">
           <pattern id="pattern-circles" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
@@ -85,14 +81,14 @@ const ContactSection = () => {
         </svg>
       </div>
 
-      <div className=" container mx-auto px-4  ">
-        <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12">
-          {/* Left Content - Same as before */}
+      <div className="container mx-auto px-4 flex flex-col flex-grow">
+        <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12 flex-grow">
+          {/* Left Content */}
           <div className="w-full lg:w-1/2 space-y-8">
             <div className="text-center lg:text-left">
               <h2 className="text-4xl font-bold text-[#DE3163] mb-4">Get in Touch</h2>
               <p className="text-gray-600 mb-8">
-                Have questions about our womens health initiatives? We are here to help and support you.
+                Have questions about our women's health initiatives? We are here to help and support you.
               </p>
             </div>
 
@@ -102,13 +98,13 @@ const ContactSection = () => {
                 <h3 className="font-semibold mb-2">Phone</h3>
                 <p className="text-gray-600">+91 XXX XXX XXXX</p>
               </div>
-              
+
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                 <Mail className="w-8 h-8 text-[#E195AB] mb-3" />
                 <h3 className="font-semibold mb-2">Email</h3>
                 <p className="text-gray-600">contact@suvidhaa.org</p>
               </div>
-              
+
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow col-span-full">
                 <MapPin className="w-8 h-8 text-[#E195AB] mb-3" />
                 <h3 className="font-semibold mb-2">Location</h3>
@@ -117,15 +113,13 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Right Form - Updated with functionality */}
+          {/* Right Form */}
           <div className="w-full lg:w-1/2">
             <div className="bg-white rounded-xl shadow-xl p-8">
               {status.message && (
-                <div 
+                <div
                   className={`mb-4 p-4 rounded ${
-                    status.type === 'success' 
-                      ? 'bg-green-100 text-green-700' 
-                      : 'bg-red-100 text-red-700'
+                    status.type === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
                   }`}
                 >
                   {status.message}
@@ -190,9 +184,10 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Footer Push Fix */}
+      <div className="mt-auto"></div>
     </div>
-    
-    </>
   );
 };
 

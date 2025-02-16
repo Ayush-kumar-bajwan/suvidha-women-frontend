@@ -83,7 +83,7 @@ const ApproveVolunteers = () => {
           ) : (
             <div className="grid gap-4">
               {pendingVolunteers.map((volunteer) => (
-                <div key={volunteer._id} className="bg-gray-50 p-4 rounded-lg flex items-center justify-between">
+                <div key={volunteer._id} className="bg-gray-50 p-4 rounded-lg flex flex-wrap items-center justify-between">
                   <div>
                     <h3 className="font-medium text-gray-800">{volunteer.name}</h3>
                     <p className="text-gray-600 text-sm">{volunteer.email}</p>
