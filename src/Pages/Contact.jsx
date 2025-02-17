@@ -89,7 +89,7 @@ const ContactSection = () => {
             <div className="text-center lg:text-left">
               <h2 className="text-4xl font-bold text-[#DE3163] mb-4">Get in Touch</h2>
               <p className="text-gray-600 mb-8">
-                Have questions about our womens health initiatives? We are here to help and support you.
+                Have questions about our women's health initiatives? We are here to help and support you.
               </p>
             </div>
 
