@@ -3,3 +3,6 @@
 .Header{
     @apply hover:bg-[#E195AB] bg-[#FFEDFA] text-[#DE3163] px-6 py-2 rounded-4xl hover:text-white
 }
+.certificate{
+    @apply hover:tracking-widest
+} 

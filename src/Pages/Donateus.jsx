@@ -24,13 +24,16 @@ const DonationPage = () => {
         <h2 className="text-xl font-semibold text-[#DE3163]">Other Ways to Donate</h2>
         <div className="mt-4 space-y-4">
           <div className="bg-white p-4 rounded-xl shadow-md">
-            <h3 className="text-lg font-medium text-[#E195AB]">Bank Transfer</h3>
-            <p className="text-gray-600">Account No: 1234567890</p>
-            <p className="text-gray-600">IFSC Code: ABCD1234</p>
+            <h3 className="text-lg font-medium text-[#DE3163]">Bank Transfer</h3>
+            <p className="text-gray-600">Account Name: Suvidha Mahila Mandal</p>
+            <p className="text-gray-600">Account No: 97840100027609</p>
+            <p className="text-gray-600">IFSC Code: BARB0DBKPAR</p>
+            <p className="text-gray-600"> BANK NAME : Bank Of Baroda</p>
+            <p className="text-gray-600"> CITY : Nagpur</p>
           </div>
           <div className="bg-white p-4 rounded-xl shadow-md">
-            <h3 className="text-lg font-medium text-[#E195AB]">UPI Payment</h3>
-            <p className="text-gray-600">UPI ID: suvidha@upi</p>
+            <h3 className="text-lg font-medium text-[#DE3163]">UPI Payment</h3>
+            <p className="text-gray-600">UPI ID : suvid801091@barodampay </p>
           </div>
         </div>
       </div>

@@ -89,7 +89,7 @@ const ContactSection = () => {
             <div className="text-center lg:text-left">
               <h2 className="text-4xl font-bold text-[#DE3163] mb-4">Get in Touch</h2>
               <p className="text-gray-600 mb-8">
-                Have questions about our women's health initiatives? We are here to help and support you.
+                Have questions about our womens health initiatives? We are here to help and support you.
               </p>
             </div>
 
@@ -97,19 +97,19 @@ const ContactSection = () => {
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                 <Phone className="w-8 h-8 text-[#E195AB] mb-3" />
                 <h3 className="font-semibold mb-2">Phone</h3>
-                <p className="text-gray-600">+91 XXX XXX XXXX</p>
+                <p className="text-gray-600"> +91 7020044091</p>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                 <Mail className="w-8 h-8 text-[#E195AB] mb-3" />
                 <h3 className="font-semibold mb-2">Email</h3>
-                <p className="text-gray-600">contact@suvidhaa.org</p>
+                <p className="text-gray-600"> info@suvidhafoundationedutech.org</p>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow col-span-full">
                 <MapPin className="w-8 h-8 text-[#E195AB] mb-3" />
                 <h3 className="font-semibold mb-2">Location</h3>
-                <p className="text-gray-600">123 Health Avenue, Mumbai, Maharashtra</p>
+                <p className="text-gray-600">Suvidha Foundation, Motghare Bhavan, Ward No. 4, Santnagar, Annamod, Near Water Tank, Khaperkheda, Saoner, Nagpur, Maharashtra, India , <br /> Pincode - 441102</p>
               </div>
             </div>
           </div>

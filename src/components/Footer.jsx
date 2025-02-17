@@ -35,11 +35,11 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-medium">Certifications</h3>
           <ul className="mt-2 text-[#FFEDFA] space-y-1">
-            <li>✅ 80G Certificate</li>
-            <li>✅ 12A Certificate</li>
-            <li>✅ CSR Certificate</li>
-            <li>✅ Suvidha Darpan Registration</li>
-            <li>✅ Suvidha Pan Card</li>
+            <li className="certificate"><a href="https://suvidhafoundationedutech.org/Themes/doc/80G_APROVAL.pdf" target="_blank" rel="noopener">✅ 80G Certificate</a></li>
+            <li className="certificate"><a href="https://suvidhafoundationedutech.org/Themes/doc/12A_APPROVAL.pdf" target="_blank" rel="noopener">✅ 12A Certificate</a></li>
+            <li className="certificate"><a href="https://suvidhafoundationedutech.org/Themes/doc/CSR.PDF" target="_blank" rel="noopener">✅ CSR Certificate</a></li>
+            <li className="certificate"><a href="https://suvidhafoundationedutech.org/Themes/doc/suvidha_darpan_portal_registration.pdf" target="_blank" rel="noopener">✅ Suvidha Darpan Registration</a></li>
+            <li className="certificate"><a href="https://suvidhafoundationedutech.org/Themes/doc/suvidha_pan_card.pdf" target="_blank" rel="noopener">✅ Suvidha Pan Card</a></li>
           </ul>
         </div>
       </div>
